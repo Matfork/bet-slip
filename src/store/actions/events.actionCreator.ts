@@ -1,9 +1,18 @@
-import { EventType } from '../../shared/models/events';
+import { EventType } from 'domains/events';
+import { SelectedSelectionOptions, SelectionType } from 'domains/selection';
 import { EventsActionCreators } from './action-creators/events.actionCreator';
 
-export type SetEventsActionProps = {
+type SetEventsActionProps = {
   type: EventsActionCreators.SetEvents;
   payload: EventType[];
 };
 
-export type EventsActionProps = SetEventsActionProps;
+type SetUserSelectionActionProps = {
+  type: EventsActionCreators.SetUserSelection;
+  payload: {
+    selection: SelectionType;
+    option: SelectedSelectionOptions;
+  };
+};
+
+export type EventsActionProps = SetEventsActionProps | SetUserSelectionActionProps;

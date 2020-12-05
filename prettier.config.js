@@ -7,4 +7,10 @@ module.exports = {
   tabWidth: 2,
   useTabs: false,
   bracketSpacing: true,
+  overrides: [
+    {
+      files: ['**/*.scss'],
+      options: { singleQuote: false },
+    },
+  ],
 };

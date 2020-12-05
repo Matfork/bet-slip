@@ -1,6 +1,6 @@
 import { call, put, StrictEffect, takeLatest } from 'redux-saga/effects';
 import { EventsService } from '../../services/events.service';
-import { EventType } from '../../shared/models/events';
+import { EventType } from '../../domains/events';
 import { AppActionCreators } from '../actions/action-creators/app.actionCreator';
 import { EventsActionCreators } from '../actions/action-creators/events.actionCreator';
 

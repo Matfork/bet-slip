@@ -3,17 +3,33 @@
 exports[`Events Reducer should match snapshot 1`] = `
 Object {
   "events": Array [],
+  "userSelection": Array [],
 }
 `;
 
-exports[`Events Reducer should perform RequestEvents action 1`] = `
+exports[`Events Reducer should perform SerUserSelection action 1`] = `
 Object {
   "events": Array [],
+  "userSelection": Array [
+    Object {
+      "id": "1",
+      "name": "test",
+      "price": 2400,
+    },
+  ],
+}
+`;
+
+exports[`Events Reducer should perform SerUserSelection action 2`] = `
+Object {
+  "events": Array [],
+  "userSelection": Array [],
 }
 `;
 
 exports[`Events Reducer should perform SetEvents action 1`] = `
 Object {
   "events": Array [],
+  "userSelection": Array [],
 }
 `;

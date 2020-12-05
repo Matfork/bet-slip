@@ -1,7 +1,7 @@
 import produce, { Draft } from 'immer';
-import { ErrorResponse } from '../../shared/models/error';
+import { ErrorResponse } from '../../domains/error';
 import { AppActionCreators } from '../actions/action-creators/app.actionCreator';
-import { AppActionsProps, SetErrorActionProps } from '../actions/app.actions';
+import { AppActionsProps } from '../actions/app.actions';
 
 export interface AppInitialState {
   isLoading: boolean;
@@ -23,7 +23,7 @@ export default produce((draft: Draft<AppInitialState> = initialState, props: App
       draft.isLoading = false;
       break;
     case AppActionCreators.SetError:
-      draft.error = (props as SetErrorActionProps).payload;
+      draft.error = props.payload;
       break;
     case AppActionCreators.ClearError:
       draft.error = null;

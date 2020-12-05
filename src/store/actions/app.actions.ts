@@ -1,24 +1,24 @@
-import { ErrorResponse } from '../../shared/models/error';
+import { ErrorResponse } from '../../domains/error';
 import { AppActionCreators } from './action-creators/app.actionCreator';
 
-export type IsLoadingActionActionProps = {
+type IsLoadingActionActionProps = {
   type: AppActionCreators.IsLoading;
 };
 
-export type FinishedLoadingActionProps = {
+type FinishedLoadingActionProps = {
   type: AppActionCreators.FinishedLoading;
 };
 
-export type ClearErrorActionProps = {
+type ClearErrorActionProps = {
   type: AppActionCreators.ClearError;
 };
 
-export type SetErrorActionProps = {
+type SetErrorActionProps = {
   type: AppActionCreators.SetError;
   payload: ErrorResponse;
 };
 
-export type ClearDataActionProps = {
+type ClearDataActionProps = {
   type: AppActionCreators.ClearData;
 };
 

@@ -1,5 +1,5 @@
-import { ApiError } from '../shared/models/error';
-import { EventType } from '../shared/models/events';
+import { ApiError } from '../domains/error';
+import { EventType } from '../domains/events';
 import { API_URL } from '../shared/utilities/constants';
 
 export class EventsService {
