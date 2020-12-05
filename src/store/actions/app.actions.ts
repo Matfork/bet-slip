@@ -1,28 +1,25 @@
-import { ErrorResponse } from "../../shared/models/error";
+import { ErrorResponse } from '../../shared/models/error';
+import { AppActionCreators } from './action-creators/app.actionCreator';
 
 export type IsLoadingActionActionProps = {
-  type: string;
+  type: AppActionCreators.IsLoading;
 };
 
 export type FinishedLoadingActionProps = {
-  type: string;
+  type: AppActionCreators.FinishedLoading;
 };
 
 export type ClearErrorActionProps = {
-  type: string;
+  type: AppActionCreators.ClearError;
 };
 
 export type SetErrorActionProps = {
-  type: string;
+  type: AppActionCreators.SetError;
   payload: ErrorResponse;
 };
 
 export type ClearDataActionProps = {
-  type: string;
-};
-
-export type GetMatchesActionProps = {
-  type: string;
+  type: AppActionCreators.ClearData;
 };
 
 export type AppActionsProps =
@@ -30,5 +27,4 @@ export type AppActionsProps =
   | FinishedLoadingActionProps
   | ClearErrorActionProps
   | ClearDataActionProps
-  | SetErrorActionProps
-  | GetMatchesActionProps;
+  | SetErrorActionProps;

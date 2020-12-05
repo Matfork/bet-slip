@@ -1,39 +1,39 @@
 import sagaHelper from 'redux-saga-testing';
 import { call, put } from 'redux-saga/effects';
-import { MatchesService } from '../../../services/matches.service';
+import { EventsService } from '../../../services/events.service';
 import { AppActionCreators } from '../../actions/action-creators/app.actionCreator';
-import { MatchesActionCreators } from '../../actions/action-creators/matches.actionCreator';
-import { matchesSaga, getMatches } from '../matches.saga';
+import { EventsActionCreators } from '../../actions/action-creators/events.actionCreator';
+import { eventsSaga, getEvents } from '../events.saga';
 
-MatchesService.getData = jest.fn(() => {
+EventsService.getEvents = jest.fn(() => {
   return Promise.resolve([1, 2]) as any;
 });
 
-describe('Matches Sage', () => {
+describe('Events Saga', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   it('should match snapshot', () => {
-    expect(matchesSaga()).toMatchSnapshot();
+    expect(eventsSaga()).toMatchSnapshot();
   });
 
-  describe('getMatches saga method', () => {
+  describe('getEvents saga method', () => {
     describe('with correct response', () => {
-      const it = sagaHelper(getMatches());
+      const it = sagaHelper(getEvents() as any);
 
       it('should set is loading', (result) => {
         expect(result).toEqual(put({ type: AppActionCreators.IsLoading }));
       });
 
       it('should call api', (result) => {
-        expect(result).toEqual(call(MatchesService.getData as any));
-        expect(MatchesService.getData).not.toHaveBeenCalled();
+        expect(result).toEqual(call(EventsService.getEvents as any));
+        expect(EventsService.getEvents).not.toHaveBeenCalled();
         return [1, 2];
       });
 
       it('should set matches data', (result) => {
-        expect(result).toEqual(put({ type: MatchesActionCreators.SetMatches, payload: [1, 2] }));
+        expect(result).toEqual(put({ type: EventsActionCreators.SetEvents, payload: [1, 2] }));
       });
 
       it('should finish loading', (result) => {
@@ -42,15 +42,15 @@ describe('Matches Sage', () => {
     });
 
     describe('with error response', () => {
-      const it = sagaHelper(getMatches());
+      const it = sagaHelper(getEvents() as any);
 
       it('should set is loading', (result) => {
         expect(result).toEqual(put({ type: AppActionCreators.IsLoading }));
       });
 
       it('should try call api', (result) => {
-        expect(result).toEqual(call(MatchesService.getData as any));
-        expect(MatchesService.getData).not.toHaveBeenCalled();
+        expect(result).toEqual(call(EventsService.getEvents as any));
+        expect(EventsService.getEvents).not.toHaveBeenCalled();
         return new Error('Something went wrong');
       });
 

@@ -1,4 +1,4 @@
-import { MatchesService } from '../matches.service';
+import { EventsService } from '../events.service';
 
 const fetchMock = (data: any, status = 200, statusText = '', ok = true): jest.Mock => {
   (global as any).fetch = jest.fn(() =>
@@ -23,7 +23,7 @@ describe('Matches Service', () => {
       expect.assertions(1);
       fetchMock([1]);
 
-      const response = await MatchesService.getData();
+      const response = await EventsService.getEvents();
       expect(response).toEqual([1]);
     });
   });
@@ -34,7 +34,7 @@ describe('Matches Service', () => {
       fetchMock({ noData: true }, 500, 'Error from api', false);
 
       try {
-        await MatchesService.getData();
+        await EventsService.getEvents();
       } catch (err) {
         expect(err.status).toEqual(500);
         expect(err.message).toEqual('Error from api');

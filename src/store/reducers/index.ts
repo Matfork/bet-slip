@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
 import appReducer, { AppInitialState } from './app.reducer';
-import matchesReducer, { MatchesInitialState } from './matches.reducer';
+import eventsReducer, { EventsInitialState } from './events.reducer';
 
 export interface RootState {
   app: AppInitialState;
-  matches: MatchesInitialState;
+  events: EventsInitialState;
 }
 
 export default combineReducers({
   app: appReducer,
-  matches: matchesReducer,
+  events: eventsReducer,
 });

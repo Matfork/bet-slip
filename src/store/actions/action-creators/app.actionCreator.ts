@@ -1,7 +1,7 @@
 export enum AppActionCreators {
-  IsLoading = 'app/isLoading',
-  FinishedLoading = 'app/finishedLoading',
-  ClearError = 'app/clearError',
-  SetError = 'app/setError',
-  ClearData = 'app/clearData',
+  IsLoading = 'APP/IS_LOADING',
+  FinishedLoading = 'APP/FINISHED_LOADING',
+  ClearError = 'APP/CLEAR_ERROR',
+  SetError = 'APP/SET_ERROR',
+  ClearData = 'APP/CLEAR_DATA',
 }

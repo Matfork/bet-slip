@@ -1,6 +1,6 @@
 import { all, fork, StrictEffect } from 'redux-saga/effects';
-import { matchesSaga } from './matches.saga';
+import { eventsSaga } from './events.saga';
 
 export default function* rootSaga(): Generator<StrictEffect, void, void> {
-  yield all([fork(matchesSaga)]);
+  yield all([fork(eventsSaga)]);
 }
