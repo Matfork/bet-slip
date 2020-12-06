@@ -1,0 +1,13 @@
+$responsive-container-width: 720px;
+
+body {
+  margin: 0;
+}
+
+.App-component {
+  .App-component__responsive-container {
+    padding: 24px;
+    margin: 0 auto;
+    max-width: $responsive-container-width;
+  }
+}

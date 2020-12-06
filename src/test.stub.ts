@@ -1,0 +1,87 @@
+import { EventType } from 'domains/events';
+import { MarketType } from 'domains/market';
+import { SelectionType } from 'domains/selection';
+import { initialState as initialAppState } from 'store/reducers/app.reducer';
+import { initialState as initialEventsState } from 'store/reducers/events.reducer';
+
+export const selectionsStub: SelectionType[] = [
+  {
+    id: 'SEL_1',
+    name: 'Real Madrid',
+    price: 1.23,
+  },
+  {
+    id: 'SEL_2',
+    name: 'Barcelona',
+    price: 2.05,
+  },
+];
+
+export const marketsStub: MarketType[] = [
+  {
+    id: 'MKT_1',
+    name: 'Team to Win',
+    selections: selectionsStub,
+  },
+  {
+    id: 'MKT_2',
+    name: 'Player to Score First',
+    selections: [
+      {
+        id: 'SEL_3',
+        name: 'Ronaldo',
+        price: 1.15,
+      },
+      {
+        id: 'SEL_4',
+        name: 'Messi',
+        price: 1.3,
+      },
+      {
+        id: 'SEL_5',
+        name: 'Bale',
+        price: 1.35,
+      },
+    ],
+  },
+];
+
+export const eventsStub: EventType[] = [
+  {
+    id: 'EVT_1',
+    name: 'Real Madrid vs Barcelona',
+    markets: marketsStub,
+  },
+  {
+    id: 'EVT_2',
+    name: 'Atletico Madrid vs Malaga',
+    markets: [
+      {
+        id: 'MKT_3',
+        name: 'Team to Win',
+        selections: [
+          {
+            id: 'SEL_6',
+            name: 'Atletico',
+            price: 1.4,
+          },
+          {
+            id: 'SEL_7',
+            name: 'Malaga',
+            price: 3.05,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'EVT_3',
+    name: "Empty Event that shouldn't render",
+    markets: [],
+  },
+];
+
+export const initialStateStub = {
+  app: initialAppState,
+  events: { ...initialEventsState, events: eventsStub },
+};

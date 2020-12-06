@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Selection Component should test snapshot 1`] = `
+<div>
+  <div
+    class="Selection-component"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-outlined Selection-component__button  MuiButton-outlinedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2"
+        >
+          Real Madrid
+        </p>
+        <p
+          class="MuiTypography-root MuiTypography-body2"
+        >
+          1.23
+        </p>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-outlined Selection-component__button  MuiButton-outlinedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2"
+        >
+          Barcelona
+        </p>
+        <p
+          class="MuiTypography-root MuiTypography-body2"
+        >
+          2.05
+        </p>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+</div>
+`;

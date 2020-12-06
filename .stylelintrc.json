@@ -1,0 +1,16 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "indentation": [
+      2,
+      {
+        "severity": "error"
+      }
+    ],
+    "string-quotes": "double",
+    "order/order": ["custom-properties", "dollar-variables", "declarations", "rules"],
+    "order/properties-order": []
+  },
+  "ignoreFiles": ["dist/**/*", "node_modules/**/*"]
+}

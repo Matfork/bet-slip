@@ -1,0 +1,22 @@
+@import "src/assets/scss/spacing";
+@import "src/assets/scss/colors";
+
+.Event-component {
+  .MuiCardHeader-root {
+    background: $blue;
+    color: $white;
+    text-align: center;
+  }
+  .Event-component__card {
+    margin-bottom: $spacing-4;
+
+    .Event-component__label {
+      display: block;
+      text-align: center;
+    }
+
+    .Event-component__markets {
+      display: block;
+    }
+  }
+}
