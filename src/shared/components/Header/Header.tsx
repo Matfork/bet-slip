@@ -18,7 +18,7 @@ const HeaderComponent: React.FC = () => {
       <AppBar position="static" className={styles[className]}>
         <Toolbar>
           <Typography variant="h6" className={styles[`${className}__title`]}>
-            Bet Split
+            Bet Slip
           </Typography>
 
           <IconButton

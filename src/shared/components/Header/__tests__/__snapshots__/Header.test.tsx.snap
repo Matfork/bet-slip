@@ -11,7 +11,7 @@ exports[`Header Component should test snapshot 1`] = `
       <h6
         class="MuiTypography-root Header-component__title MuiTypography-h6"
       >
-        Bet Split
+        Bet Slip
       </h6>
       <button
         aria-label="menu"
