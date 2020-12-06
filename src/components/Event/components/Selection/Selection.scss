@@ -1,0 +1,36 @@
+@import "src/assets/scss/media";
+@import "src/assets/scss/spacing";
+@import "src/assets/scss/colors";
+
+$button-width: 160px;
+
+.Selection-component {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: $md-min) {
+    justify-content: space-around;
+    flex-direction: row;
+
+    .Selection-component__button {
+      width: $button-width !important;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .Selection-component__button {
+    width: 100%;
+    margin-bottom: $spacing-1;
+
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .MuiButton-root:hover.Mui-disabled,
+  .Selection-component__button--selected {
+    background-color: $green !important;
+    color: $white !important;
+  }
+}

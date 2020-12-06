@@ -1,21 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import EventComponent from 'components/Event/Event';
+import { EventsActionCreators } from 'store/actions/action-creators/events.actionCreator';
+import HeaderComponent from 'shared/components/Header/Header';
+import { RootState } from 'store/reducers';
+import { AppInitialState } from 'store/reducers/app.reducer';
+import { Backdrop, CircularProgress } from '@material-ui/core';
 import './App.scss';
 
-function App(): any {
+const App: React.FC = () => {
+  const { isLoading } = useSelector<RootState, AppInitialState>((state) => state.app);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({ type: EventsActionCreators.RequestEvents });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+    <div className="App-component">
+      <HeaderComponent />
+
+      {isLoading ? (
+        <Backdrop open>
+          <CircularProgress color="inherit" />
+        </Backdrop>
+      ) : (
+        <div className="App-component__responsive-container">
+          <EventComponent />
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default App;

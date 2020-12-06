@@ -1,0 +1,20 @@
+@import "src/assets/scss/spacing";
+
+$card-width: 180px;
+$card-height: $card-width - 40px;
+
+.Drawer-component__container {
+  padding: $spacing-3;
+
+  .Drawer-component__card {
+    padding: $spacing-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $card-width;
+    height: $card-height;
+    margin-bottom: $spacing-3;
+    text-align: center;
+    flex-direction: column;
+  }
+}

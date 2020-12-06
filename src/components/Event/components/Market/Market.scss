@@ -1,0 +1,30 @@
+@import "src/assets/scss/media";
+@import "src/assets/scss/spacing";
+
+.Market-component {
+  .Market-component__container {
+    margin: $spacing-2 0;
+
+    .MuiDivider-root {
+      margin-top: $spacing-2;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      .MuiDivider-root {
+        display: none;
+      }
+    }
+
+    .Market-component__label {
+      h6 {
+        margin-bottom: $spacing-2;
+      }
+    }
+  }
+}
