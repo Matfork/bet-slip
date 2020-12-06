@@ -10,7 +10,7 @@ describe('Header Component', () => {
 
   it('should display title', () => {
     customRender(<Header />);
-    const titleEl = screen.queryByText(/Bet Split/);
+    const titleEl = screen.queryByText(/Bet Slip/);
     expect(titleEl).toBeInTheDocument();
   });
 

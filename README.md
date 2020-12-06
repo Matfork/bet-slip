@@ -1,4 +1,4 @@
-# Bet Split App
+# Bet Slip Demo
 
 This project was built using CRA.
 
