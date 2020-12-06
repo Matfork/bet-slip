@@ -2,7 +2,9 @@ import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core';
 import React, { useState } from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
 import DrawerComponent from '../Drawer/Drawer';
-import './Header.scss';
+import styles from './Header.module.scss';
+
+const className = 'Header-component';
 
 const HeaderComponent: React.FC = () => {
   const [showDrawer, setShowDrawer] = useState(false);
@@ -13,16 +15,16 @@ const HeaderComponent: React.FC = () => {
 
   return (
     <>
-      <AppBar position="static" className="Header-component__container">
+      <AppBar position="static" className={styles[className]}>
         <Toolbar>
-          <Typography variant="h6" className="Header-component__title">
+          <Typography variant="h6" className={styles[`${className}__title`]}>
             Bet Split
           </Typography>
 
           <IconButton
             onClick={() => handleToggleDrawer(true)}
             edge="end"
-            className="Header-component__hamburger"
+            className={styles[`${className}__hamburger`]}
             color="inherit"
             aria-label="menu"
           >

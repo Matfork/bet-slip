@@ -5,8 +5,7 @@ import { EventsInitialState } from 'store/reducers/events.reducer';
 import { useDispatch, useSelector } from 'react-redux';
 import { SelectionType, SelectedSelectionOptions } from 'domains/selection';
 import { EventsActionCreators } from 'store/actions/action-creators/events.actionCreator';
-
-import './Drawer.scss';
+import styles from './Drawer.module.scss';
 
 interface DrawerProps {
   showDrawer: boolean;
@@ -30,11 +29,11 @@ const DrawerComponent: React.FC<DrawerProps> = ({ showDrawer, onToggleDrawer }: 
   };
 
   return (
-    <Drawer anchor="right" open={showDrawer} onClose={() => onToggleDrawer(false)} className={className}>
-      <div className={`${className}__container`}>
+    <Drawer anchor="right" open={showDrawer} onClose={() => onToggleDrawer(false)} className={styles[className]}>
+      <div className={styles[`${className}__container`]}>
         {userSelection.length ? (
           userSelection.map((selection) => (
-            <Card variant="outlined" key={selection.id} className={`${className}__card`}>
+            <Card variant="outlined" key={selection.id} className={styles[`${className}__card`]}>
               <Typography variant="subtitle1">{selection.name}</Typography>
               <Typography variant="subtitle2">{selection.price}</Typography>
               <Button color="primary" variant="contained" onClick={() => handleRemoveSelection(selection)}>
@@ -43,7 +42,7 @@ const DrawerComponent: React.FC<DrawerProps> = ({ showDrawer, onToggleDrawer }: 
             </Card>
           ))
         ) : (
-          <Card variant="outlined" className={`${className}__card`}>
+          <Card variant="outlined" className={styles[`${className}__card`]}>
             <Typography variant="body1">You don&apos;t have any bet selected, try selecting one option first! </Typography>
           </Card>
         )}

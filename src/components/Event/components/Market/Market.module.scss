@@ -1,5 +1,6 @@
 @import "src/assets/scss/media";
 @import "src/assets/scss/spacing";
+@import "src/assets/scss/colors";
 
 .Market-component {
   .Market-component__container {
@@ -18,6 +19,11 @@
 
       .MuiDivider-root {
         display: none;
+
+        &:hover.Mui-disabled {
+          background-color: $green !important;
+          color: $white !important;
+        }
       }
     }
 

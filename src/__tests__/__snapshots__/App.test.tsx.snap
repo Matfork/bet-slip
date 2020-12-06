@@ -6,7 +6,7 @@ exports[`App Component should test snapshot 1`] = `
     class="App-component"
   >
     <header
-      class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary Header-component__container MuiPaper-elevation4"
+      class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary Header-component MuiPaper-elevation4"
     >
       <div
         class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
@@ -42,6 +42,9 @@ exports[`App Component should test snapshot 1`] = `
         </button>
       </div>
     </header>
+    <div
+      class="aea-ctm"
+    />
     <div
       class="App-component__responsive-container"
     >
@@ -140,7 +143,7 @@ exports[`App Component should test snapshot 1`] = `
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-root"
                   />
                 </div>
                 <div
@@ -233,7 +236,7 @@ exports[`App Component should test snapshot 1`] = `
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-root"
                   />
                 </div>
               </div>
@@ -332,7 +335,7 @@ exports[`App Component should test snapshot 1`] = `
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-root"
                   />
                 </div>
               </div>

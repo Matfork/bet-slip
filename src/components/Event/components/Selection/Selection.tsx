@@ -5,7 +5,7 @@ import { SelectionType, SelectedSelectionOptions } from 'domains/selection';
 import { EventsActionCreators } from 'store/actions/action-creators/events.actionCreator';
 import { RootState } from 'store/reducers';
 import { EventsInitialState } from 'store/reducers/events.reducer';
-import './Selection.scss';
+import styles from './Selection.module.scss';
 
 interface SelectionProps {
   selections: SelectionType[];
@@ -29,7 +29,7 @@ const SelectionComponent: React.FC<SelectionProps> = ({ selections }: SelectionP
   };
 
   return (
-    <div className={className}>
+    <div className={styles[className]}>
       {selections.map((selection) => {
         const isAlreadySelected = selectedIds.includes(selection.id);
         return (
@@ -39,7 +39,7 @@ const SelectionComponent: React.FC<SelectionProps> = ({ selections }: SelectionP
             disableElevation
             variant="outlined"
             key={selection.id}
-            className={`${className}__button ${isAlreadySelected ? `${className}__button--selected` : ''}`}
+            className={`${styles[`${className}__button`]} ${isAlreadySelected ? `${styles[`${className}__button--selected`]}` : ''}`}
             disabled={isAlreadySelected}
           >
             <Typography variant="body2">{selection.name}</Typography>

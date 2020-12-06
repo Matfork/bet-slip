@@ -6,7 +6,9 @@ import HeaderComponent from 'shared/components/Header/Header';
 import { RootState } from 'store/reducers';
 import { AppInitialState } from 'store/reducers/app.reducer';
 import { Backdrop, CircularProgress } from '@material-ui/core';
-import './App.scss';
+import styles from './App.module.scss';
+
+const className = 'App-component';
 
 const App: React.FC = () => {
   const { isLoading } = useSelector<RootState, AppInitialState>((state) => state.app);
@@ -17,15 +19,17 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="App-component">
+    <div className={styles[className]}>
       <HeaderComponent />
+
+      <div className="aea-ctm" />
 
       {isLoading ? (
         <Backdrop open>
           <CircularProgress color="inherit" />
         </Backdrop>
       ) : (
-        <div className="App-component__responsive-container">
+        <div className={styles[`${className}__responsive-container`]}>
           <EventComponent />
         </div>
       )}

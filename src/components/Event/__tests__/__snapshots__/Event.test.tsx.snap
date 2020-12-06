@@ -97,7 +97,7 @@ exports[`Event Component should test snapshot 1`] = `
                 </div>
               </div>
               <hr
-                class="MuiDivider-root"
+                class="MuiDivider-root MuiDivider-root"
               />
             </div>
             <div
@@ -190,7 +190,7 @@ exports[`Event Component should test snapshot 1`] = `
                 </div>
               </div>
               <hr
-                class="MuiDivider-root"
+                class="MuiDivider-root MuiDivider-root"
               />
             </div>
           </div>
@@ -289,7 +289,7 @@ exports[`Event Component should test snapshot 1`] = `
                 </div>
               </div>
               <hr
-                class="MuiDivider-root"
+                class="MuiDivider-root MuiDivider-root"
               />
             </div>
           </div>
