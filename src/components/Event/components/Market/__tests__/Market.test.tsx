@@ -15,7 +15,7 @@ describe('Market Component', () => {
     expect(titleEl).toBeInTheDocument();
   });
 
-  it('should not display events if there is no data', () => {
+  it('should not display markets if there is no data', () => {
     customRender(<Market markets={[]} />);
     const titleEl = screen.queryByText(/Team to Win/);
     expect(titleEl).toBeNull();
