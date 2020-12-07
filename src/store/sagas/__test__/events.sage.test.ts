@@ -32,7 +32,7 @@ describe('Events Saga', () => {
         return [1, 2];
       });
 
-      it('should set matches data', (result) => {
+      it('should set events data', (result) => {
         expect(result).toEqual(put({ type: EventsActionCreators.SetEvents, payload: [1, 2] }));
       });
 
