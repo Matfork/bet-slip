@@ -5,7 +5,7 @@ describe('App Reducer', () => {
   it('should match snapshot', () => {
     const state = appReducer(initialState, {
       type: 'other',
-    });
+    } as any);
 
     expect(state).toMatchSnapshot();
   });
@@ -27,6 +27,10 @@ describe('App Reducer', () => {
   it('should perform SetError action', () => {
     const state = appReducer(initialState, {
       type: AppActionCreators.SetError,
+      payload: {
+        message: 'error message',
+        status: 500,
+      },
     });
     expect(state).toMatchSnapshot();
   });

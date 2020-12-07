@@ -37,7 +37,10 @@ Object {
 
 exports[`App Reducer should perform SetError action 1`] = `
 Object {
-  "error": undefined,
+  "error": Object {
+    "message": "error message",
+    "status": 500,
+  },
   "isLoading": false,
 }
 `;

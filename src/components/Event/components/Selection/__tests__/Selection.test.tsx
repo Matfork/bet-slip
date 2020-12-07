@@ -17,13 +17,13 @@ describe('Selection Component', () => {
     expect(component.container).toMatchSnapshot();
   });
 
-  it('should display all markets avaiable', () => {
+  it('should display all selections avaiable', () => {
     customRender(<Selection selections={selectionsStub} />);
     const titleEl = screen.queryByText(/Real Madrid/);
     expect(titleEl).toBeInTheDocument();
   });
 
-  it('should not display events if there is no data', () => {
+  it('should not display selections if there is no data', () => {
     customRender(<Selection selections={[]} />);
     const titleEl = screen.queryByText(/Real Madrid/);
     expect(titleEl).toBeNull();
